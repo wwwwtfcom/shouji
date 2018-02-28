@@ -7,7 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        background: #000;
+        color:#fff;
+        font-size: 30px;
+        text-align: center;
+        line-height: 200px;
+    }
+</style>
 <body>
-主页
+<div>1</div>
 </body>
 </html>
+<script>
+    let box=document.querySelector('div');
+    box.ontouchmove=function(e){
+        this.innerHTML=e.changedTouches[0].pageX;
+    }
+</script>
